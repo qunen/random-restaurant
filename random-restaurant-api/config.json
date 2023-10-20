@@ -1,0 +1,13 @@
+{
+    "env": "dev",
+    "port": 8080,
+    "logPath": {
+        "api": "./logs/random-restaurant-api.log",
+        "default": "./logs/random-restaurant-default.log"
+    },
+    "database": {
+        "mongo": {
+            "uri": "mongodb://localhost:27017"
+        }
+    }
+}
