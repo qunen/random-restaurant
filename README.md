@@ -2,7 +2,7 @@
 
 This is a fullstack app that allows user to add a list of restaurant and generates a random one.
 
-## Prerequisit
+## Prerequisite
 - Ensure docker is installed and running
 
 ## Running the app

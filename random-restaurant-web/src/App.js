@@ -35,7 +35,7 @@ function App() {
         toggleShowAddRestaurant(!showAddRestaurant);
     };
     const randomRestaurant = () => {
-        setRandomResult(restaurants[Math.floor(Math.random() * restaurants.length)]);
+        if (restaurants.length !== 0) setRandomResult(restaurants[Math.floor(Math.random() * restaurants.length)]);
     };
     const deleteRestaurant = async (id) => {
         const options = {
@@ -81,10 +81,10 @@ function App() {
 
     return (
         <div className='app'>
-            <Title title={'Restaurant Randomnizer'} showAddRestaurant={showAddRestaurant} toggleForm={toggleForm}/>
+            <Title title={'Restaurant randomizer'} showAddRestaurant={showAddRestaurant} toggleForm={toggleForm}/>
             {showAddRestaurant ? <AddRestaurant addRestaurant={addRestaurant}/> : ''}
             <List restaurants={restaurants} title={'Restaurant List'} deleteRestaurant={deleteRestaurant}/>
-            <Button className={'btn-random'} text={'Randomnize!'} onClick={randomRestaurant}/>
+            <Button className={'btn-random'} text={'randomize!'} onClick={randomRestaurant}/>
             {randomResult !== null ? <Result restaurant={randomResult} clearResult={clearResult}/> : ''}
         </div>
     );
